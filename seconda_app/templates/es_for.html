@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html"%}
+    
+{%block title%} {{block.super}} | Es_for {%endblock title%}
+
+{%block content%}
     <h2>Contenuto del dizionario</h2>
     <ul>
         {% for key, value in my_dict.items %}
@@ -59,5 +56,5 @@
     {% for x in list2 reversed %}
         <i>elemento</i> - {{ x }}<br/>
     {% endfor %}
-</body>
-</html>
+    
+{%endblock content%}

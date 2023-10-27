@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html"%}
+    
+{%block title%} {{block.super}} | Index {%endblock title%}
+
+{%block content%}
     <ol>
         <li><a href="/">index ROOT</a></li>
         <li><a href="{% url 'prima_app:homepage'%}">home page</a></li>
@@ -13,5 +11,5 @@
         <li><a href="{% url 'prima_app:chi_siamo'%}">chi_siamo</a></li>
         <li><a href="{% url 'prima_app:variabili'%}">variabili</a></li>
     </ol>
-</body>
-</html>
+
+ {%endblock content%}

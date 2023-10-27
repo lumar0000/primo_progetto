@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html"%}
+    
+{%block title%} {{block.super}} | Index_root {%endblock title%}
+
+{%block content%}
     <h1>PRIMO PROGETTO - ROOT MENU'</h1>
     <ol>
         <li><a href="/admin">pannello admin</a></li>
@@ -14,5 +11,5 @@
         <li><a>.....</a></li>
     </ol>
     <!-- <a href="/admin">Pannello admin</a>, {% url 'prima_app:index'%} -->
-</body>
-</html>
+    
+{%endblock content%}
