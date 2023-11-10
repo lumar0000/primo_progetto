@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+    
+{%block title%} {{block.super}} | Index {%endblock title%}
+
+{%block content%}
+    {% if var1 < var2 %}
+        <p style="color: green">{{var1}}</p>
+        <p style="color: red">{{var2}}</p>
+    {% elif var1 > var2 %}
+        <p style="color: red">{{var1}}</p>
+        <p style="color: green">{{var2}}</p>
+    {% else %}
+        <p style="color: black"><i>{{var1}}</i></p>
+        <p style="color: black"><i>{{var2}}</i></p>
+    {% endif %}
+    <p>{{var3}}</p>
+
+{%endblock content%}
