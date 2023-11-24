@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{%block title%}
+    {{ articoli }}
+{%endblock title%}
+
+{%block content%}
+    <list>
+        <ul>
+            {% for x in articoli %}
+                <li>{{ x }}</li>
+            {% endfor %}
+        </ul>
+    </list>
+{%endblock content%}
