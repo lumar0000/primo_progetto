@@ -41,10 +41,13 @@ def homenews(request):
     print(context)
     return render(request, "homepagenews.html", context)
 
-def listaArticoli(request, pk):
-    articoli = Articolo.objects.filter(giornalista_id=pk)
+def listaArticoli(request, pk=None):
+    if(pk==None):
+        articoli = Articolo.objects.all()
+    else:
+        articoli = Articolo.objects.filter(giornalista_id=pk)
     context = {
-        'articoli': articoli,
+        'articoli': articoli
     }
     return render(request, 'lista_articoli.html', context)
 

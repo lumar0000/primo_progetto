@@ -6,6 +6,4 @@ urlpatterns = [
     path('articoli/<int:pk>', articoloDetailView, name="articolo_detail"),
     path('', homenews, name="homeview"),
     path('lista_articoli/<int:pk>', listaArticoli, name="lista_articoli_giornalista"),
-    
-   
 ]
