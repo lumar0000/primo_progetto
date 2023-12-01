@@ -10,9 +10,9 @@
         <h1>Articoli di un Giornalista:</h1>
     {% endif %}
     {% for x in articoli %}
-        <p><strong>Titolo: </strong>{{ x.titolo }}</p>
-        <p><strong>Contenuto: </strong>{{ x.contenuto }}</p>
-        <p><strong>Autore: </strong>{{ x.giornalista }}</p>
+        <p><strong>Titolo: </strong><a href="">{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
         <hr>
     {% endfor %}
 {%endblock content%}

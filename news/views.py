@@ -55,7 +55,7 @@ def listaArticoli(request, pk=None):
 
 def queryBase (request):
     #1. Tutti gli articoli scritti da giornalisti di un certo cognome:
-    articoli_cognome = Articolo.objects.filter(giornalista__cognome='Rossi') 
+    articoli_cognome = Articolo.objects.filter(giornalista__cognome='Bianchi') 
     #2. Totale
     numero_totale_articoli = Articolo.objects.count()
 
@@ -133,7 +133,7 @@ def queryBase (request):
     context = {
         'articoli_cognome': articoli_cognome,
         'numero_totale_articoli': numero_totale_articoli,
-        'numero_articoli_giornalista 1': numero_articoli_giornalista_1,
+        'numero_articoli_giornalista': numero_articoli_giornalista_1,
         'articoli_ordinati': articoli_ordinati,
         'articoli_senza_visualizzazioni': articoli_senza_visualizzazioni,
         'articolo_piu_visualizzato': articolo_piu_visualizzato,
