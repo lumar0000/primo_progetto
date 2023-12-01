@@ -47,6 +47,7 @@ def listaArticoli(request, pk=None):
     else:
         articoli = Articolo.objects.filter(giornalista_id=pk)
     context = {
+        'pk': pk,
         'articoli': articoli
     }
     return render(request, 'lista_articoli.html', context)
