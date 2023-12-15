@@ -1,6 +1,6 @@
 {% extends "base.html"%}
     
-{%block title%} {{block.super}} | Es_for {%endblock title%}
+{%block title%} {{block.super}} | views_b {%endblock title%}
 
 {%block content%}
     <p>voti:</p>
@@ -8,8 +8,12 @@
     {% for key, value in voti.items %}
        <li>{{ key }}</li>
        <ul>
-       {% for x in value %}
-            <li>{{ x }} </li>
+       {% for materia in value %}
+       <li>
+            {% for x in materia %}
+                {{ x }},
+            {% endfor %}
+        </il>
         {% endfor %}
        </ul>
     {% endfor %}
