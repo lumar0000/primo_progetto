@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+    
+{%block title%} {{block.super}} | Es_for {%endblock title%}
+
+{%block content%}
+    <p>voti:</p>
+    <list>
+    {% for key, value in voti.items %}
+       <li>{{ key }}</li>
+       <ul>
+       {% for x in value %}
+            <li>{{ x }} </li>
+        {% endfor %}
+       </ul>
+    {% endfor %}
+    </list>
+{%endblock content%}
