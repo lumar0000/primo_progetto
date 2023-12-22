@@ -1,0 +1,41 @@
+{% extends "base.html"%}
+    
+{%block title%} {{block.super}} | Es_for {%endblock title%}
+
+{%block content%}
+    <p>voti massimi e minimi:</p>
+    <list>
+    {% for key, value in minmax.items %}
+       <li>voto massimo: {{ key }}</li>
+        {% if forloop.first %} 
+            {% for elementi in value %}
+                {% if forloop.first %}
+                    <li>Studenti con voto massimo:
+                {% endif %}
+                {% if forloop.last %}
+                    <li>Materie con voto massimo: 
+                {% endif %}
+                {% for x in elementi %}
+                    {{ x }}, 
+                {% endfor %}
+                </li>
+            {% endfor %}
+        {% endif %}
+
+        {% if forloop.last %}
+        {% for elementi in value %}
+            {% if forloop.first %}
+                <li>Studenti con voto minimo:
+            {% endif %}
+            {% if forloop.last %}
+                <li>Materie con voto minimo:
+            {% endif %}
+            {% for x in elementi %}
+                {{ x }}, 
+            {% endfor %}
+            </li>
+        {% endfor %}
+    {% endif %}
+    {% endfor %}
+    </list>
+{%endblock content%}

@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+    
+{%block title%} {{block.super}} | view_c {%endblock title%}
+
+{%block content%}
+    <p>voti:</p>
+    <list>
+    {% for key, value in media.items %}
+       <li>{{ key }}: {{value}}</li>
+    {% endfor %}
+    </list>
+{%endblock content%}

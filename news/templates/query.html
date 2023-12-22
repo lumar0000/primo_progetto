@@ -1,0 +1,111 @@
+{% extends "base.html"%}
+{%block title%}
+    {{ Query }}
+{%endblock title%}
+
+{%block content%}
+    {% for x in articoli_cognome %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    <p>numero articoli: {{ numero_totale_articoli}}</p>
+    <p>numero articoli giornalisti: {{ numero_articoli_giornalista}}</p>
+
+    {% for x in articoli_ordinati %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in articoli_senza_visualizzazioni %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    <p>articolo piu visualizzato: {{ articolo_piu_visualizzato}}</p>
+
+    {% for x in giornalisti_data %}
+        <p><strong>nome e cognome: </strong><a>{{ x }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in articoli_del_giorno %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in articoli_periodo %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in giornalisti_nati %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in articoli_giornalisti %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    <p>giornalista giovane: {{ giornalista_giovane}}</p>
+    <p>giornalista anziano: {{ giornalista_anziano}}</p>
+
+    {% for x in ultimi %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in articoli_mese_anno %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in giornalisti_con_articoli_popolari %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in articoli_con_and %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in articoli_con_or %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+    {% for x in articoli_con_not %}
+        <p><strong>Titolo: </strong><a>{{ x.titolo }}</a></p>
+        <p><strong>Contenuto: </strong><a>{{ x.contenuto }}</a></p>
+        <p><strong>Autore: </strong><a>{{ x.giornalista }}</a></p>
+        <hr>
+    {% endfor %}
+
+{%endblock content%}
