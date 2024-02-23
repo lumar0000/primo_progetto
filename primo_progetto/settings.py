@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'news',
     'voti',
     'prova_pratica_1',
-     'corsheaders',
+    'products',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +132,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = "uploads"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
